@@ -31,6 +31,7 @@ class Counter extends Component {
                 {this.props.children}              
                 <span className={this.getBadgeClasses()}>{this.formatCount()}</span>
                 <button onClick={() => {this.handleIncrement({id:1})}} className = "btn btn-secondary btn-sm">Increment</button>
+                <button onClick={() => this.props.onDelete(this.props.counterId)} className="btn btn-danger btn-sm m-2">Delete</button>
                 {/* {this.state.tags.length === 0 && "please create a new tag!!!"}
                 {this.renderTags()} */}
             </div>
